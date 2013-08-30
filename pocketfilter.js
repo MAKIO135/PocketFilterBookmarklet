@@ -2,9 +2,11 @@ if(document.location != 'http://getpocket.com/a/queue/list/'){
 	alert('Pocket Filter Bookmarklet works only with List View');
 	document.location = 'http://getpocket.com/a/queue/list/';
 }
+
+
 else {
 	if($('#PocketFilter').length === 0){
-		var div = $('<div id="PocketFilter"><input id="PocketFilterTags" style="margin:0 10px;"><p style="color:#fff; display:inline;"><input id="orFilter" style="margin:0 10px;" type="radio" name="filterGroup" checked>OR filter<input id="andFilter" style="margin:0 10px;" type="radio" name="filterGroup">AND filter</p><button style="margin:0 10px; padding:0 5px;" onclick="filter();">Filter tags</button><p style="color:#fff; display:inline;">By <a href="http://twitter.com/makio135" target="_blank" style="color:#fff; text-decoration:none;">@Makio135</a></p></div>');
+		var div = $('<div id="PocketFilter"><input type="text" style="margin:0 10px;" value="tag1, tag2, ..." id="PocketFilterTags" onblur="if (this.value == "") {this.value = "tag1, tag2, ...";}" onfocus="if (this.value == "tag1, tag2, ...") {this.value = "";}"><p style="color:#fff; display:inline;"><input id="orFilter" style="margin:0 10px;" type="radio" name="filterGroup" checked>OR filter<input id="andFilter" style="margin:0 10px;" type="radio" name="filterGroup">AND filter</p><button style="margin:0 10px; padding:0 5px;" onclick="filter();">Filter tags</button><p style="color:#fff; display:inline;">By <a href="http://twitter.com/makio135" target="_blank" style="color:#fff; text-decoration:none;">@Makio135</a></p></div>');
 		$(div).css({
 			'position': 'absolute',
 			'top': 0,
