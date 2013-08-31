@@ -1,8 +1,11 @@
 PocketFilterBookmarklet
 =======================
 
-Adding multiple tags filter to getpocket.com with a bookmarklet<br>
-Supports **OR** and **AND** filters
+Adding multiple tags filter to getpocket.com with a bookmarklet
+
+Supports **OR** and **AND** filters:<br>
+OR filter: Display items with at least one of the filtering tags<br>
+AND filter: Display items with at least all the filtering tags
 
 To install the bookmarklet select the following line of code, drag'n drop it to your favorites and rename it "PocketFilter":
  ```javascript
